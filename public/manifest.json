@@ -1,0 +1,16 @@
+{
+  "name": "TrustSpace",
+  "short_name": "TrustSpace",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "description": "TrustSpace booking and property discovery PWA.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
