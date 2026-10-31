@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      port: 4173,
+      port: 5050,
       proxy: {
         '/api': {
           target: env.VITE_API_URL,
@@ -20,6 +20,9 @@ export default defineConfig(({ mode }) => {
           rewrite: (path) => path.replace(/^\/api/, '/api')
         }
       }
+    },
+    preview: {
+      port: 5050,
     }
   };
 });
