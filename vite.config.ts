@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
       port: 5050,
       proxy: {
         '/api': {
-          target: env.VITE_API_URL,
+          target: env.VITE_API_URL || 'https://trustspace-backend.onrender.com',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '/api')
         }

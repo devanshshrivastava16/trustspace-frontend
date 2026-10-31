@@ -1,10 +1,10 @@
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || 'https://trustspace-backend.onrender.com';
 
 // In development, use /api proxy path
-// In production, use full URL from env if set, otherwise /api
+// In production, use the configured backend URL.
 export const API_BASE_URL = import.meta.env.DEV 
   ? '/api' 
-  : (API_URL ? `${API_URL}/api` : '/api');
+  : `${API_URL}/api`;
 
 export async function request<T>(path: string, options: RequestInit = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
